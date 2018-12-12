@@ -1,19 +1,38 @@
 var orm = require("../config/orm.js");
 
-var orm = {
-    selectAll: function() {
+
+var ormBurg = {
+    selectAll: function(cb) {
         orm.selectAll("burgers", function(res){
-            console.log(res)
+            // console.log(res);
+            cb(res);
+        });
+    }
+    ,
+    insertOne: function(burgername, cb){
+        orm.insertOne("burgers", burgername, function(res){
+            // console.log(res);
+            cb(res);
         });
     },
-    insertOne: function(){
-        orm.insertOne("burgers", burgername, devourer, function(res){
-            console.log(res);
+    updateOne: function(idNum, devoured, cb){
+        orm.updateOne("burgers", idNum, devoured, function(res){
+            // console.log(res);
+            cb(res);
         });
     }
     
 }
 
+
+
+
+// ormBurg.selectAll();
+
+// ormBurg.updateOne(1, true);
+
+// ormBurg.insertOne("hadi special #3");
+
 // orm.selectAll();
 
-module.exports = orm;
+module.exports = ormBurg;
