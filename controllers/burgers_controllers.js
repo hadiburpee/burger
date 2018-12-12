@@ -7,15 +7,15 @@ var burger = require("../models/burger.js");
 //create routes and logic
 router.get("/", function(req, res){
     burger.selectAll(function(data){
-        
-        res.render("index", data)
+    var hbsObject = {
+        burgers: data
+    };
+    console.log(hbsObject) 
+    res.render("index", hbsObject)
     });
 
 });
 
-burger.selectAll(function(data){
-    console.log(data);
-})
 
 
 module.exports = router; 
