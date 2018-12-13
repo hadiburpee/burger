@@ -30,6 +30,17 @@ router.post("/api/addBurger", function(req, res){
     
 });
 
+router.put("/api/devourBurger/:id", function(req, res){
+    console.log("req.params" + req.params);
+    var id = req.params.id;
+
+    console.log("req.body: " + id);
+    burger.updateOne(id, true, function(){
+
+    });
+
+});
+
 
 
 module.exports = router; 

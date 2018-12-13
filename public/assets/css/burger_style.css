@@ -10,3 +10,15 @@
 #devour{
     color: blue;
 }
+
+.undevoured{
+    float: left;
+}
+
+.dev-container{
+    float: right;
+}
+
+.orderBurger{
+    float: left;
+}

@@ -2,10 +2,16 @@
 
 <h1>Welcome to Burger Land</h1>
 
+
 <div class="undevoured">
+    <h2>Burgers to Eat</h2>
     {{#each burgers}}
-    <p id="Burger">{{burger_name}}</p>
+    {{#unless devoured}}
+    <div id="{{id}}">
+    <p id="Burger">{{id}}__{{burger_name}}</p>
     <button type="submit" dvrd="{{devoured}}" brgrid="{{id}}" class="devour">Devour It</button>
+    </div>
+    {{/unless}}
     {{/each}}
 </div>
 
@@ -19,8 +25,21 @@
  <button type="submit" id="burgerButton">Order Burger!</button>
 </form>
 
-<div class="devoured">
 
+<div class="dev-container">
+<h2>Burgers Devoured</h2>
+<div class="devoured">
+    {{#each burgers}}
+    {{#if devoured}}
+    <div id="{{id}}">
+    <p id="Burger">{{id}}__{{burger_name}}</p>
+    <button type="submit" dvrd="{{devoured}}" brgrid="{{id}}" class="devour">Devour It</button>
+    </div>
+    {{/if}}
+    {{/each}}
+    
+    
+    </div>
 
 
 </div>

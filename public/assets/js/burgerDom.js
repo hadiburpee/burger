@@ -30,8 +30,21 @@ $(function() {
         console.log("burgerId: " + burgerId);
         console.log("devoured: " + devoured);
 
+        $.ajax("/api/devourBurger/" + burgerId, {
+          type: "PUT",
+          data: devoured
+        }).then(function(){
+          location.reload();
+        });
 
 
     });
+
+    var eatorNot = $(".devour").data("dvrd")
+    if(eatorNot == 1){
+      $(".devoured").append($())
+
+    }
+
 });
 

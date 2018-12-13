@@ -18,12 +18,12 @@ var orm = {
             cb(res);
         });
     },
-    updateOne: function(tableInput, idNum, devoured){
-        var queryString = "UPDATE ?? WHERE ?";
-        connection.query(queryString, [tableInput, {id: idNum}, {devoured: devoured}], function(err, res){
+    updateOne: function(tableInput, idNum, devoured, cb){
+        var queryString = "UPDATE ?? SET ? WHERE ?";
+        connection.query(queryString, [tableInput, {devoured: devoured}, {id: idNum}], function(err, res){
             if(err) throw err;
             console.log(res);
-            // cb(res);
+            cb(res);
         });
     }
     
