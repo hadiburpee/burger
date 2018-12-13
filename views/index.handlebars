@@ -7,10 +7,10 @@
     <h2>Burgers to Eat</h2>
     {{#each burgers}}
     {{#unless devoured}}
-    <div id="{{id}}">
+    {{!-- <div id="{{id}}"> --}}
     <p id="Burger">{{id}}__{{burger_name}}</p>
     <button type="submit" dvrd="{{devoured}}" brgrid="{{id}}" class="devour">Devour It</button>
-    </div>
+    {{!-- </div> --}}
     {{/unless}}
     {{/each}}
 </div>
@@ -33,7 +33,7 @@
     {{#if devoured}}
     <div id="{{id}}">
     <p id="Burger">{{id}}__{{burger_name}}</p>
-    <button type="submit" dvrd="{{devoured}}" brgrid="{{id}}" class="devour">Devour It</button>
+    {{!-- <button type="submit" dvrd="{{devoured}}" brgrid="{{id}}" class="devour">Devour It</button> --}}
     </div>
     {{/if}}
     {{/each}}
