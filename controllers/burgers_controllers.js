@@ -10,12 +10,22 @@ router.get("/", function(req, res){
     var hbsObject = {
         burgers: data
     };
-    console.log(hbsObject) 
-    res.render("index", hbsObject)
+    console.log(hbsObject); 
+    res.render("index", hbsObject);
     });
 
+});
+
+router.post("/api/addBurger", function(req, res){
+    burger.insertOne(req.body, function(data){
+    res.render(data);
+
+    });
+    
 });
 
 
 
 module.exports = router; 
+
+

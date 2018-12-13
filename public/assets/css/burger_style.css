@@ -1,0 +1,12 @@
+#orderForm{
+    box-sizing: content-box;
+    width: 100px;
+}
+
+.orderBurger{
+    color: red;
+}
+
+#devour{
+    color: blue;
+}
