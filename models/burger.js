@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 
 var ormBurg = {
     selectAll: function(cb) {
-        orm.selectAll("burgers", function(res){
+        orm.selectAll("h4u367tuzrbhr2kw.burgers", function(res){
             // console.log(res);
             cb(res);
         });
