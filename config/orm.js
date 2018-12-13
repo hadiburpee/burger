@@ -10,12 +10,12 @@ var orm = {
             
         });
     },
-    insertOne: function(tableInput, name){
+    insertOne: function(tableInput, name, cb){
         var queryString = "INSERT INTO ?? (burger_name) VALUES (?)";
         connection.query(queryString, [tableInput, name], function(err, res){
             if(err) throw err;
             console.log(res);
-            // cb(res);
+            cb(res);
         });
     },
     updateOne: function(tableInput, idNum, devoured){

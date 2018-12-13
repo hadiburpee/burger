@@ -17,8 +17,13 @@ router.get("/", function(req, res){
 });
 
 router.post("/api/addBurger", function(req, res){
-    burger.insertOne(req.body, function(data){
-    res.render(data);
+    var burgerType = req.body.burger;
+    console.log("req.body: " + burgerType);
+    // console.log("req.body: " + req.body.data);
+    // console.log("req.body: " + req.body.data.burger);
+    // console.log("burgerType: " + burgerType)
+    burger.insertOne(burgerType, function(){
+    // res.render(data);
 
     });
     

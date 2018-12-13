@@ -12,7 +12,7 @@ var ormBurg = {
     insertOne: function(burgername, cb){
         orm.insertOne("burgers", burgername, function(res){
             // console.log(res);
-            cb(res);
+            // cb(res);
         });
     },
     updateOne: function(idNum, devoured, cb){
