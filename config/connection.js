@@ -15,9 +15,9 @@ var connection;
     user: "root",
     password: "YOURPASSWORD",
     database: "burgers_db"
-    }
+    
 });
-
+}
 connection.connect(function(err){
     if(err){
         console.log("error connectionL " + err.stack);
