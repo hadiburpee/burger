@@ -11,6 +11,7 @@ router.get("/", function(req, res){
         burgers: data
     };
     console.log(hbsObject); 
+    // console.log(hbsObject.burgers[1]);
     res.render("index", hbsObject);
     });
 

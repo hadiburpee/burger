@@ -20,5 +20,18 @@ $(function() {
         }
       );
     });
+
+    $(".devour").on("click", function(event){
+        // event.preventDefault();
+        
+        $(this).data("dvrd", 1);
+        var devoured = $(this).data("dvrd");
+        var burgerId = $(this).attr("brgrid");
+        console.log("burgerId: " + burgerId);
+        console.log("devoured: " + devoured);
+
+
+
+    });
 });
 

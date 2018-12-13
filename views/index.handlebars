@@ -1,11 +1,11 @@
-<script src="/public/assets/css/burger_style.css"></script>
+
 
 <h1>Welcome to Burger Land</h1>
 
-<div>
+<div class="undevoured">
     {{#each burgers}}
     <p id="Burger">{{burger_name}}</p>
-    <button type="submit" id="devour">Devour It</button>
+    <button type="submit" dvrd="{{devoured}}" brgrid="{{id}}" class="devour">Devour It</button>
     {{/each}}
 </div>
 
@@ -18,4 +18,10 @@
 
  <button type="submit" id="burgerButton">Order Burger!</button>
 </form>
+
+<div class="devoured">
+
+
+
+</div>
 
