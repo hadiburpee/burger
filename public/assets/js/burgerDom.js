@@ -15,10 +15,12 @@ $(function() {
           console.log("Test ajax post");
         //   // Reload the page to get the updated list
         //   console.log("Data log:" + data)
-          location.reload();
+          
 
         }
+        
       );
+      location.reload();
     });
 
     $(".devour").on("click", function(event){
@@ -34,10 +36,10 @@ $(function() {
           type: "PUT",
           data: devoured
         }).then(function(){
-          location.reload();
+          
         });
 
-
+        location.reload();
     });
 
     var eatorNot = $(".devour").data("dvrd")
